@@ -1,7 +1,7 @@
-import * as THREE from 'three';
-import './style.css';
+import * as THREE from "three";
+import "./style.css";
 
-const canvas = document.getElementById('scene');
+const canvas = document.getElementById("scene");
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -13,11 +13,11 @@ const camera = new THREE.PerspectiveCamera(
   60,
   window.innerWidth / window.innerHeight,
   0.1,
-  100
+  100,
 );
 camera.position.set(0, 5, 15);
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -44,14 +44,14 @@ shape.closePath();
 const prismGeo = new THREE.ExtrudeGeometry(shape, {
   depth: height,
   bevelEnabled: false,
-  steps: 1
+  steps: 1,
 });
 prismGeo.rotateX(-Math.PI / 2);
 prismGeo.translate(0, -height / 2, 0);
 
 const prism = new THREE.Mesh(
   prismGeo,
-  new THREE.MeshStandardMaterial({ color: 0x555555, wireframe: true })
+  new THREE.MeshStandardMaterial({ color: 0x555555, wireframe: true }),
 );
 scene.add(prism);
 
@@ -72,7 +72,7 @@ for (let i = 0; i < ballCount; i++) {
   const r = 0.2 + Math.random() * 0.2;
   const geometry = new THREE.SphereGeometry(r, 16, 16);
   const material = new THREE.MeshStandardMaterial({
-    color: new THREE.Color(Math.random(), Math.random(), Math.random())
+    color: new THREE.Color(Math.random(), Math.random(), Math.random()),
   });
   const mesh = new THREE.Mesh(geometry, material);
   const pos = randomPointInsidePrism(radius, height, r);
@@ -84,8 +84,8 @@ for (let i = 0; i < ballCount; i++) {
     velocity: new THREE.Vector3(
       (Math.random() - 0.5) * 2,
       Math.random() * 2,
-      (Math.random() - 0.5) * 2
-    )
+      (Math.random() - 0.5) * 2,
+    ),
   });
 }
 
