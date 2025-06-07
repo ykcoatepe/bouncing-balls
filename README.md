@@ -9,10 +9,15 @@ A simple 3D animation that simulates dozens of balls bouncing inside a rotating 
 
 ## Setup
 
-Install dependencies and start the development server:
+Run the setup script to install dependencies and verify the Node.js version:
 
 ```bash
-npm install
+./setup.sh
+```
+
+After setup, start the development server:
+
+```bash
 npm run dev
 ```
 
