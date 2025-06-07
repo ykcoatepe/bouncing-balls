@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "npm install --omit=optional && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint -c .eslintrc.json --config-type json .",
+    "format": "prettier -w ."
   },
   "devDependencies": {
     "eslint": "^9.27.0",
