@@ -10,6 +10,9 @@
     "lint": "eslint -c .eslintrc.json --config-type json .",
     "format": "prettier -w ."
   },
+  "engines": {
+    "node": ">=18"
+  },
   "devDependencies": {
     "eslint": "^9.27.0",
     "prettier": "^3.5.3",

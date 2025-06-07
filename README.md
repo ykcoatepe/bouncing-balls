@@ -4,7 +4,8 @@ A simple 3D animation that simulates dozens of balls bouncing inside a rotating 
 
 ## Prerequisites
 
-- Node.js 18 or later
+- Node.js 18 or later. The project includes an [.nvmrc](.nvmrc) file for use with
+  [nvm](https://github.com/nvm-sh/nvm) or compatible tools.
 
 ## Setup
 
